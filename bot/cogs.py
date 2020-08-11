@@ -22,6 +22,8 @@ class MainCog(commands.Cog):
         logging.info(f'Connected to {len(self.bot.guilds)} guilds:')
         for guild in self.bot.guilds:
             logging.info(f'  -> {guild.name!r} with {guild.member_count} members')
+await bot.change_presence(activity=discord.Game(name="Velvet"))
+
 
     @commands.Cog.listener()
     async def on_command_error(self, ctx: commands.Context, error):
